@@ -40,7 +40,6 @@ dependencies:
   data_connection_checker: ^0.3.4
   # For local cache
   shared_preferences: ^0.5.10
-  flutter_secure_storage: ^3.3.3
 
 dev_dependencies:
   flutter_test:
