@@ -12,7 +12,7 @@ import 'package:http/http.dart' as http;
 
 final serviceLocator = GetIt.instance;
 
-void init() async {
+Future<void> init() async {
   //! Features
   // Bloc
   serviceLocator

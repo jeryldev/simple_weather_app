@@ -55,7 +55,7 @@ class Weather {
       description: json['description'],
       icon: json['icon'],
       main: json['main'],
-      id: (json['id'] as num).toInt(),
+      id: (json['id'] as num)?.toInt(),
     );
   }
 
@@ -82,18 +82,21 @@ class Main {
   final double temp;
   final double pressure;
   final double humidity;
+  // ignore: non_constant_identifier_names
   final double temp_min;
+  // ignore: non_constant_identifier_names
   final double temp_max;
 
+  // ignore: non_constant_identifier_names
   Main({this.temp, this.pressure, this.humidity, this.temp_min, this.temp_max});
 
   factory Main.fromJson(Map<String, dynamic> json) {
     return Main(
       humidity: (json['humidity'] as num).toDouble(),
       pressure: (json['pressure'] as num).toDouble(),
-      temp: (json['temp'] as num).toDouble(),
-      temp_max: (json['temp_max'] as num).toDouble(),
-      temp_min: (json['temp_min'] as num).toDouble(),
+      temp: (json['temp'] as num)?.toDouble(),
+      temp_max: (json['temp_max'] as num)?.toDouble(),
+      temp_min: (json['temp_min'] as num)?.toDouble(),
     );
   }
 
@@ -146,11 +149,11 @@ class Sys {
   factory Sys.fromJson(Map<String, dynamic> json) {
     return Sys(
       country: json['country'],
-      id: (json['id'] as num).toInt(),
-      message: (json['message'] as num).toDouble(),
-      sunrise: (json['sunrise'] as num).toInt(),
-      sunset: (json['sunset'] as num).toInt(),
-      type: (json['type'] as num).toInt(),
+      id: (json['id'] as num)?.toInt(),
+      message: (json['message'] as num)?.toDouble(),
+      sunrise: (json['sunrise'] as num)?.toInt(),
+      sunset: (json['sunset'] as num)?.toInt(),
+      type: (json['type'] as num)?.toInt(),
     );
   }
 
