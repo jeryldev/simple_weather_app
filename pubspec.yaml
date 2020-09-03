@@ -40,7 +40,8 @@ dependencies:
   data_connection_checker: ^0.3.4
   # For local cache
   shared_preferences: ^0.5.10
-  transparent_image: ^1.0.0
+  # For better handling of network images
+  cached_network_image: ^2.3.1
 
 dev_dependencies:
   flutter_test:
