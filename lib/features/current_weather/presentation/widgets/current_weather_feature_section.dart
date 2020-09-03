@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_weather_app/features/current_weather/presentation/bloc/current_weather_bloc.dart';
+import 'package:simple_weather_app/features/current_weather/presentation/widgets/widgets.dart';
 
 import 'loading_widget.dart';
 
@@ -24,7 +25,7 @@ class CurrentWeatherFeatureSection extends StatelessWidget {
     } else if (state is Loading) {
       return LoadingWidget();
     } else if (state is Loaded) {
-      return Text(state.currentWeather.weather[0].description);
+      return CurrentWeatherCard(currentWeather: state.currentWeather);
     } else if (state is Error) {
       return Text(state.errorMessage.toString());
     }

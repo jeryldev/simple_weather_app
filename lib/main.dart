@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
       title: 'Material App Bar',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.green.shade800,
-        accentColor: Colors.green.shade500,
+        primaryColor: Colors.blue,
+        accentColor: Colors.lightBlueAccent[600],
       ),
       home: CurrentWeatherPage(),
     );
