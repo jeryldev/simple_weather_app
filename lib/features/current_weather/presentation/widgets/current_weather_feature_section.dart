@@ -21,7 +21,7 @@ class CurrentWeatherFeatureSection extends StatelessWidget {
   // ignore: missing_return
   Widget displayFeature(CurrentWeatherState state) {
     if (state is Empty) {
-background      return MessageDisplayWidget(
+      return MessageDisplayWidget(
         messageText: 'Start searching!',
         gradientColorList: [
           Colors.tealAccent[400],
