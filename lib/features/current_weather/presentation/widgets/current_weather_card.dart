@@ -4,29 +4,20 @@ import 'package:flutter/material.dart';
 import 'package:simple_weather_app/features/current_weather/domain/entities/current_weather.dart';
 import './widgets.dart';
 
-class CurrentWeatherCard extends StatefulWidget {
+class CurrentWeatherCard extends StatelessWidget {
   final CurrentWeather currentWeather;
-  const CurrentWeatherCard({
-    Key key,
-    @required this.currentWeather,
-  }) : super(key: key);
 
-  @override
-  _CurrentWeatherCardState createState() => _CurrentWeatherCardState();
-}
+  const CurrentWeatherCard({Key key, this.currentWeather}) : super(key: key);
 
-class _CurrentWeatherCardState extends State<CurrentWeatherCard> {
   @override
   Widget build(BuildContext context) {
-    String location =
-        widget.currentWeather.name + ", " + widget.currentWeather.sys.country;
-    String tempInCelsius = (widget.currentWeather.main.temp - 273.15)
-            .toStringAsFixed(1)
-            .titleCase +
-        "\u00B0";
+    String location = currentWeather.name + ", " + currentWeather.sys.country;
+    String tempInCelsius =
+        (currentWeather.main.temp - 273.15).toStringAsFixed(1).titleCase +
+            "\u00B0";
     String weatherDescription =
-        (widget.currentWeather.weather[0].description).titleCase;
-    String weatherIcon = widget.currentWeather.weather[0].icon;
+        (currentWeather.weather[0].description).titleCase;
+    String weatherIcon = currentWeather.weather[0].icon;
 
     return SizedBox.expand(
       child: Container(

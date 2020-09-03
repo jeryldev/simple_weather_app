@@ -21,13 +21,16 @@ class CurrentWeatherFeatureSection extends StatelessWidget {
   // ignore: missing_return
   Widget displayFeature(CurrentWeatherState state) {
     if (state is Empty) {
-      return Text('Start searching!');
+      return MessageDisplayWidget(messageText: 'Start searching!');
     } else if (state is Loading) {
       return LoadingWidget();
     } else if (state is Loaded) {
       return CurrentWeatherCard(currentWeather: state.currentWeather);
     } else if (state is Error) {
-      return Text(state.errorMessage.toString());
+      return MessageDisplayWidget(
+          messageText: state.errorMessage == 'Server failure'
+              ? 'Location not found.'
+              : 'Error has occurred.');
     }
   }
 }

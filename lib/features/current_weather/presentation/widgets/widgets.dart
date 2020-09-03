@@ -2,6 +2,7 @@ export './current_weather_controls.dart';
 export './loading_widget.dart';
 export './current_weather_feature_section.dart';
 export './current_weather_card.dart';
+export './message_display_widget.dart';
 
 extension CapExtension on String {
   //first letter only
