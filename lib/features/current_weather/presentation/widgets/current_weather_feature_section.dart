@@ -21,16 +21,31 @@ class CurrentWeatherFeatureSection extends StatelessWidget {
   // ignore: missing_return
   Widget displayFeature(CurrentWeatherState state) {
     if (state is Empty) {
-      return MessageDisplayWidget(messageText: 'Start searching!');
+background      return MessageDisplayWidget(
+        messageText: 'Start searching!',
+        gradientColorList: [
+          Colors.tealAccent[400],
+          Colors.cyan[300],
+          // Colors.orange,
+          // Colors.orange[900]
+        ],
+      );
     } else if (state is Loading) {
       return LoadingWidget();
     } else if (state is Loaded) {
       return CurrentWeatherCard(currentWeather: state.currentWeather);
     } else if (state is Error) {
       return MessageDisplayWidget(
-          messageText: state.errorMessage == 'Server failure'
-              ? 'Location not found.'
-              : 'Error has occurred.');
+        messageText: state.errorMessage == 'Server failure'
+            ? 'Location not found.'
+            : 'Error has occurred.',
+        gradientColorList: [
+          Colors.pinkAccent[400],
+          Colors.red,
+          // Colors.orange,
+          // Colors.orange[900]
+        ],
+      );
     }
   }
 }

@@ -22,7 +22,8 @@ class _CurrentWeatherControlsState extends State<CurrentWeatherControls> {
           keyboardType: TextInputType.text,
           onSubmitted: (_) => dispatchCityCurrentWeather(),
           decoration: InputDecoration(
-              border: OutlineInputBorder(), hintText: 'Input a City'),
+              border: OutlineInputBorder(),
+              hintText: 'Search for a city, country'),
         ),
         SizedBox(height: 10),
         RaisedButton(

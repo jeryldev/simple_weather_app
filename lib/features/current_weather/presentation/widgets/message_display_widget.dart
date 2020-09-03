@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 class MessageDisplayWidget extends StatelessWidget {
   final String messageText;
+  final List<Color> gradientColorList;
   const MessageDisplayWidget({
     Key key,
     @required this.messageText,
+    @required this.gradientColorList,
   }) : super(key: key);
 
   @override
@@ -13,12 +15,7 @@ class MessageDisplayWidget extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [
-              Colors.tealAccent[400],
-              Colors.cyan[300],
-              // Colors.orange,
-              // Colors.orange[900]
-            ],
+            colors: gradientColorList,
             begin: Alignment.topLeft,
             end: Alignment.bottomCenter,
             // stops: [0.15, 1.00],
