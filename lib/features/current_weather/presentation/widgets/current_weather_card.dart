@@ -20,7 +20,7 @@ class CurrentWeatherCard extends StatelessWidget {
     String weatherIcon = currentWeather.weather[0].icon;
 
     return SizedBox.expand(
-      child: Container(
+      child: Ink(
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
@@ -35,13 +35,20 @@ class CurrentWeatherCard extends StatelessWidget {
           ),
           borderRadius: BorderRadius.all(Radius.circular(10.0)),
         ),
-        child: Row(
-          // mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            buildLocationWeatherSummary(
-                location, tempInCelsius, weatherDescription),
-            buildWeatherIconWidget(weatherIcon),
-          ],
+        child: InkWell(
+          onTap: () {},
+          borderRadius: BorderRadius.all(Radius.circular(10.0)),
+          // splashColor: Colors.tealAccent,
+          highlightColor: Colors.redAccent,
+          child: Container(
+            child: Row(
+              children: [
+                buildLocationWeatherSummary(
+                    location, tempInCelsius, weatherDescription),
+                buildWeatherIconWidget(weatherIcon),
+              ],
+            ),
+          ),
         ),
       ),
     );
