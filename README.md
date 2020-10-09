@@ -1,6 +1,7 @@
 # Simple Weather App based on TDD Clean Architecture
 
 This is my Flutter project to demonstrate Test Driven Development Clean Architecture as proposed by Reso Coder.
+
 There are 3 layers in this architecture:
 
 1. Data
@@ -28,7 +29,7 @@ Here are the steps to run this project:
 1. Clone the repository. You may click "Download as ZIP" to download the project in ZIP format and then extract it afterwards.
 2. Open the extracted folder named "simple_weather_app-master". You should see core files inside (i.e. lib, ios, test, pubxpec.yaml, etc.)
 3. Inside the extracted folder named "simple_weather_app-master" which contains the core files, open the terminal and run "flutter pub get" to get install the dependencies.
-4. Open the project in Android Studio of Visual Studio Code and run your emulator. After that, you can now start debugging this project.
+4. Open the project in Android Studio or Visual Studio Code and run your emulator. After that, you can start debugging this project.
 
 ## How to get started in Flutter?
 
