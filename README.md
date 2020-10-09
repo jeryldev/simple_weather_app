@@ -8,11 +8,17 @@ There are 3 layers in this architecture:
 3. Presentation
 
 In this architecture, the Data layer and Presentation layer can only communicate with each other with the help of Domain Layer.
+
 The Data layer is composed of data sources (i.e. local or remote), models, and repositories.
+
 The Domain layer is the middle layer which is composed of entities, use cases (or business logic), and repositories.
+
 The Presentation layer is where the UI is. This is composed of the widgets, pages, and bloc (for state management).
+
 We also have an injection_container that centralizes our multiple services for dependency injection.
+
 The injection_container is initialized on the main() in the main.dart file ("await dependencyInjection.init();");
+
 With Test Driven Development, we ensure that our tests passes first before we implement the feature in our app.
 
 ## How to run this project?
