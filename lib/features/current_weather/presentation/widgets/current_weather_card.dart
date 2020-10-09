@@ -36,7 +36,9 @@ class CurrentWeatherCard extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(10.0)),
         ),
         child: InkWell(
-          onTap: () {},
+          onTap: () {
+            // TODO Navigate to details page
+          },
           borderRadius: BorderRadius.all(Radius.circular(10.0)),
           // splashColor: Colors.tealAccent,
           highlightColor: Colors.redAccent,
