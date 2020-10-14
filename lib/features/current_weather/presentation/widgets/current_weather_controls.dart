@@ -40,5 +40,6 @@ class _CurrentWeatherControlsState extends State<CurrentWeatherControls> {
     inputTextController.clear();
     BlocProvider.of<CurrentWeatherBloc>(context)
         .add(GetCurrentWeatherForCityEvent(inputString));
+    FocusManager.instance.primaryFocus.unfocus();
   }
 }
