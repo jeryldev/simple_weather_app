@@ -47,7 +47,7 @@ class _CurrentWeatherControlsState extends State<CurrentWeatherControls> {
                   borderSide: BorderSide(
                       width: 0.8, color: Theme.of(context).primaryColor),
                 ),
-                hintText: 'Search for a city, country'),
+                hintText: 'Search a city or country'),
           ),
         ),
         // SizedBox(height: 10),

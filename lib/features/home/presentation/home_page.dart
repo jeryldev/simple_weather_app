@@ -4,12 +4,7 @@ import 'package:simple_weather_app/features/current_weather/presentation/bloc/cu
 import 'package:simple_weather_app/features/current_weather/presentation/widgets/widgets.dart';
 import 'package:simple_weather_app/injection_container.dart';
 
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +22,7 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: [
               CurrentWeatherControls(),
-              SizedBox(height: 20.0),
+              SizedBox(height: 10.0),
               BlocBuilder<CurrentWeatherBloc, CurrentWeatherState>(
                 builder: (context, state) {
                   return CurrentWeatherFeatureSection(state: state);
